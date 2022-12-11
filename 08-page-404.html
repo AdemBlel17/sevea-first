@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-page-404</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 0.8vw;
+      }
+      body {
+        font-family:/* "Inter", */ sans-serif;
+        color: #000;
+        line-height: 1;
+        width: 124rem;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(AdobeStock_112281079.jpeg);
+        background-size: cover;
+        background-position: -50%;
+        position: relative;
+        /* padding-bottom: 500px; */
+        height: 37rem;
+      }
+      .white-1 {
+        height: 8.5rem;
+        width: 125rem;
+        background-color: #fff;
+        position: relative;
+      }
+      .logo-sevea {
+        width: 24rem;
+        height: 9rem;
+        position: absolute;
+        transform: translate(10rem, 1.4rem);
+      }
+      .connexion {
+        font-size: 1.7rem;
+        display: flex;
+        gap: 7.2%;
+        position: absolute;
+
+        color: #679b1c;
+        text-decoration: none;
+
+        font-weight: bold;
+        transform: translate(450%, 150%);
+      }
+
+      .connexion:hover {
+        color: #52781c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .logo-panier {
+        width: 3.9rem;
+        position: absolute;
+        transform: translate(2650%, 30%);
+      }
+      .price-1 {
+        /* font-size: xx-large; */
+        position: absolute;
+        transform: translate(1867%, 100%);
+        color: #679b1c;
+      }
+      .stock {
+        font-weight: bold;
+        /* font-size: large; */
+        color: #679b1c;
+        position: absolute;
+        transform: translate(2265%, 300%);
+      }
+
+      .white-2 {
+        height: 3rem;
+        width: 65.5rem;
+        background-color: #fff;
+      }
+      .white-3 {
+        margin-left: 10rem;
+        margin-right: 70.5rem;
+        height: 1.8rem;
+        background-color: #fff;
+      }
+      .vague {
+        width: 124rem;
+        height: 8.5rem;
+        position: absolute;
+        transform: translate(0, -30.9rem);
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .box input {
+        padding-left: 1.8rem;
+
+        border: none;
+        position: relative;
+        height: 5rem;
+        width: 32rem;
+      }
+      .down-icon {
+        position: absolute;
+        width: 3rem;
+        transform: translate(670%, 0%);
+        color: #679b1c;
+      }
+      .box button {
+        /* padding: 1.5rem 5.5rem; */
+        height: 5rem;
+        width: 17.5rem;
+        background-color: #7f408f;
+        border: none;
+        color: #fff;
+      }
+      .box button:hover {
+        background-color: #86229f;
+        cursor: pointer;
+      }
+      footer {
+        position: absolute;
+
+        margin: 23rem 0;
+        margin-bottom: 16rem;
+        background-color: #d8d5d5;
+        width: 124rem;
+        height: 43rem;
+      }
+      .footer-logo {
+        position: absolute;
+        transform: translate(210%, 20%);
+      }
+      .grid {
+        margin: 2% 10%;
+        display: grid;
+        width: 60%;
+        height: 40%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        transform: translate(19%, 100%);
+        justify-content: center;
+        font-size: 120%;
+        column-gap: 10%;
+        /* justify-items: center; */
+      }
+      .p7 {
+        grid-column: 1/-1;
+        color: #000;
+      }
+      .p1,
+      .p2,
+      .p3 {
+        color: #679b1c;
+      }
+      .p4,
+      .p5,
+      .p6,
+      .p8 {
+        color: #000;
+      }
+      .last {
+        position: absolute;
+        transform: translate(285%, 37rem);
+        color: #7f408f;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      h1 {
+        color: #679b1c;
+        font-size: 750%;
+        margin-top: 5%;
+        text-align: center;
+      }
+      .h2 {
+        color: rgb(149, 148, 148);
+        font-size: 300%;
+        text-align: center;
+        margin-bottom: 2%;
+      }
+      .img-bird {
+        width: 20%;
+        height: 25%;
+        border-radius: 50%;
+      }
+      .img-box,
+      .links {
+        display: flex;
+        justify-content: center;
+      }
+      .link1 {
+        color: #679b1c;
+        margin: 2rem;
+      }
+      .link1:hover {
+        color: #52781c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="white-1">
+          <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea" />
+
+          <a class="connexion" href="00-landing.html" target="_blank">
+            <p>connexion</p>
+            <p>|</p>
+            <p>Inscription</p>
+          </a>
+          <img src="ICON 1.svg" alt="logo-panier" class="logo-panier" />
+          <h2 class="price-1">999,00 $</h2>
+          <p class="stock">50 articles</p>
+        </div>
+        <div class="white-2"></div>
+        <div class="white-3"></div>
+        <div class="box">
+          <input placeholder="Que recherchez-vous ?" />
+          <input placeholder="Famille de produit" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <a href="02-catalogue.html" target="_blank"
+            ><button>RECHARCHER</button></a
+          >
+        </div>
+      </div>
+
+      <img src="Vague.png" alt="Vague logo" class="vague" />
+    </header>
+    <h1>404</h1>
+    <h2 class="h2">OUPS, ENVOLEE !</h2>
+    <div class="img-box">
+      <img class="img-bird" src="im-bird2.png" alt="bird" />
+    </div>
+    <div class="links">
+      <a
+        href="01-home-page.html"
+        target="_blank"
+        title="retour a la page d'accueil"
+        class="link1"
+        >Retour à la page d'accueil</a
+      >
+      <a
+        href="#"
+        target="_blank"
+        title="contacter l'administration"
+        class="link1"
+        >contacter l'administration</a
+      >
+    </div>
+    <footer class="footer">
+      <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea footer-logo" />
+      <div class="grid">
+        <a href="" class="p1">INFORMATIONS</a>
+        <a href="06-Mon-compte.html" class="p2" target="_blank"
+          >ESPACE PERSONNEL</a
+        >
+        <a href="07-fournisseurs.html" class="p3" target="_blank"
+          >ESPACE FOURNISSEUR</a
+        >
+        <a href="08-page-404.html" class="p4" target="_blank"
+          >Mentions Légales</a
+        >
+        <a href="06-Mon-compte.html" class="p5" target="_blank">Mon compte</a>
+        <a href="06-Mon-compte.html" class="p6" target="_blank">Mon compte</a>
+        <a href="#" class="p7">CGV</a>
+        <a href="#" class="p8">CGV</a>
+      </div>
+      <p class="last">&copy; 2017 SAS Sévéa, tous droits réservés</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-home-page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 0.8vw;
+      }
+      body {
+        font-family:/* "Inter", */ sans-serif;
+        color: #000;
+        line-height: 1;
+        width: 124rem;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(AdobeStock_112281079.jpeg);
+        background-size: cover;
+        background-position: -50%;
+        position: relative;
+        /* padding-bottom: 500px; */
+        height: 37rem;
+      }
+      .white-1 {
+        height: 8.5rem;
+        width: 125rem;
+        background-color: #fff;
+        position: relative;
+      }
+      .logo-sevea {
+        width: 24rem;
+        height: 9rem;
+        position: absolute;
+        transform: translate(10rem, 1.4rem);
+      }
+      .connexion {
+        font-size: 1.7rem;
+        display: flex;
+        gap: 7.2%;
+        position: absolute;
+        font-weight: bold;
+        transform: translate(450%, 150%);
+        color: #679b1c;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .logo-panier {
+        width: 3.9rem;
+        position: absolute;
+        transform: translate(2650%, 30%);
+      }
+      .price-1 {
+        /* font-size: xx-large; */
+        position: absolute;
+        transform: translate(1867%, 100%);
+        color: #679b1c;
+      }
+      .stock {
+        font-weight: bold;
+        /* font-size: large; */
+        color: #679b1c;
+        position: absolute;
+        transform: translate(2265%, 300%);
+      }
+
+      .white-2 {
+        height: 3rem;
+        width: 65.5rem;
+        background-color: #fff;
+      }
+      .white-3 {
+        margin-left: 10rem;
+        margin-right: 70.5rem;
+        height: 1.8rem;
+        background-color: #fff;
+      }
+      .vague {
+        width: 124rem;
+        height: 8.5rem;
+        position: absolute;
+        transform: translate(0, -30.9rem);
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .box input {
+        padding-left: 1.8rem;
+
+        border: none;
+        position: relative;
+        height: 5rem;
+        width: 32rem;
+      }
+      .down-icon {
+        position: absolute;
+        width: 3rem;
+        transform: translate(670%, 0%);
+        color: #679b1c;
+      }
+      .box button {
+        /* padding: 1.5rem 5.5rem; */
+        height: 5rem;
+        width: 17.5rem;
+        background-color: #7f408f;
+        border: none;
+        color: #fff;
+      }
+      .box button:hover {
+        background-color: #86229f;
+        cursor: pointer;
+      }
+      .dog {
+        margin: 7rem 5.5rem;
+        background-image: url(vincent-van-zalinge-398122.jpg);
+        width: 114rem;
+        height: 42rem;
+        background-size: cover;
+        background-position: -50%;
+        /* margin-bottom: 5%; */
+      }
+      .dog h1 {
+        color: #fff;
+        padding: 5rem 10rem;
+        letter-spacing: 2px;
+        font-size: 240%;
+        position: relative;
+      }
+      .icon {
+        width: 3.2rem;
+        color: #fff;
+      }
+      .right-icon {
+        position: absolute;
+        transform: translate(110rem, 6rem);
+      }
+      .left-icon {
+        position: absolute;
+        transform: translate(0, 6rem);
+      }
+      .hr {
+        margin: 4.5rem 5rem;
+        position: relative;
+      }
+      .promotion-hr {
+        color: #bab6b6;
+        background-color: #fff;
+        position: absolute;
+        transform: translate(50rem, -5.5rem);
+        padding: 0 2rem;
+      }
+      .promotion {
+        margin: 4rem 7rem;
+        display: flex;
+      }
+      .promo-box {
+        width: 20vw;
+        height: fit-content;
+        /* background-color: #cad9b5; */
+        text-align: center;
+        padding: 2.6%;
+        box-shadow: -2px 5px 5px 0 #0002;
+      }
+
+      .promo-box-2,
+      .promo-box-4 {
+        border: 0.01rem solid grey;
+      }
+      .barb-img {
+        width: 20rem;
+        height: 16rem;
+        margin-bottom: 1.5rem;
+      }
+      .hr-2 {
+        margin: 1rem 0.2rem;
+      }
+      .text-1 {
+        /* max-width: 70%; */
+        margin: 3% auto;
+        font-size: 1.6rem;
+        width: 15rem;
+      }
+      .text-2 {
+        color: #c9c6c6;
+        margin: 1.6rem auto;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+      }
+      .text-3 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-top: 1.8rem;
+        position: relative;
+        color: rgb(118, 44, 118);
+      }
+      .text-3::after {
+        content: " HT";
+        font-weight: 100;
+        font-size: small;
+      }
+
+      .sold p {
+        font-size: 74%;
+        margin: 0% 0;
+        color: #bab6b6;
+        text-decoration: line-through;
+      }
+
+      .sold-box {
+        transform: translate(7.8rem, -13.6rem);
+        color: #fff;
+        background-color: #679b1c;
+        border-radius: 10%;
+        width: 4rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        margin: 0 0;
+      }
+      .promo-box-3 {
+        padding-bottom: 0.5%;
+      }
+      .text-3-2 {
+        margin: 3.35rem auto;
+      }
+
+      .btn {
+        color: #fff;
+        background-color: #679b1c;
+        padding: 3% 5%;
+        border-radius: 5%;
+        border: none;
+        margin-bottom: 1.4%;
+      }
+      .btn:hover {
+        background-color: #466c11;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .left-icon-2,
+      .right-icon-2 {
+        color: gray;
+        width: 100rem;
+      }
+      .fournisseurs-hr {
+        transform: translate(204%, -6rem);
+      }
+      .btn-promo {
+        background-color: #7f408f;
+        justify-content: center;
+        padding: 1.5rem 0rem;
+        border-radius: 5%;
+        border: none;
+        display: flex;
+        width: 25rem;
+
+        transform: translate(50rem, 5%);
+        color: #fff;
+      }
+
+      .btn-promo:hover {
+        background-color: #86229f;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .fournisseur {
+        display: flex;
+        margin: auto 8%;
+      }
+      .fourni-box {
+        width: 16%;
+        background-color: #679b1c;
+        margin: 3%;
+        box-shadow: -0.1px 0.1px 1px gray;
+      }
+      .fourni-img {
+        width: 100%;
+      }
+      .fourni-btn {
+        width: 100%;
+        border: none;
+        background-color: #679b1c;
+        padding: 3% 8%;
+        color: #fff;
+        font-size: 110%;
+      }
+      .fourni-btn:hover {
+        text-decoration: underline;
+        /* background-color: #466c11; */
+        cursor: pointer;
+      }
+      .fourni-btn-2 {
+        margin: 3.2% 0;
+      }
+      .marque-btn {
+        transform: translate(164%, -295%);
+        margin-bottom: 5%;
+      }
+      .text-1-marque {
+        max-width: 55%;
+        line-height: 120%;
+        margin: 8% auto;
+      }
+      .marque {
+        display: flex;
+        margin: 4% auto;
+        margin-left: 8%;
+      }
+      .up-icon {
+        position: absolute;
+        transform: translate(3650%, -50%);
+        width: 2.4%;
+        color: #679b1c;
+      }
+      footer {
+        position: absolute;
+
+        margin: 23rem 0;
+        margin-bottom: 16rem;
+        background-color: #d8d5d5;
+        width: 124rem;
+        height: 43rem;
+      }
+      .footer-logo {
+        position: absolute;
+        transform: translate(210%, 20%);
+      }
+      .grid {
+        margin: 2% 10%;
+        display: grid;
+        width: 60%;
+        height: 40%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        transform: translate(19%, 100%);
+        justify-content: center;
+        font-size: 120%;
+        column-gap: 10%;
+        /* justify-items: center; */
+      }
+      .p7 {
+        grid-column: 1/-1;
+        color: #000;
+      }
+      .p1,
+      .p2,
+      .p3 {
+        color: #679b1c;
+      }
+      .p4,
+      .p5,
+      .p6,
+      .p8 {
+        color: #000;
+      }
+      .last {
+        position: absolute;
+        transform: translate(285%, 37rem);
+        color: #7f408f;
+      }
+      .icon:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="white-1">
+          <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea" />
+          <a class="connexion" href="00-landing.html" target="_blank">
+            <p>connexion</p>
+            <p>|</p>
+            <p>Inscription</p>
+          </a>
+          <img src="ICON 1.svg" alt="logo-panier" class="logo-panier" />
+          <h2 class="price-1">999,00 $</h2>
+          <p class="stock">50 articles</p>
+        </div>
+        <div class="white-2"></div>
+        <div class="white-3"></div>
+        <div class="box">
+          <input placeholder="Que recherchez-vous ?" />
+          <input placeholder="Famille de produit" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <a href="02-catalogue.html" target="_blank"
+            ><button>RECHARCHER</button></a
+          >
+        </div>
+      </div>
+
+      <img src="Vague.png" alt="Vague logo" class="vague" />
+    </header>
+    <section class="dog">
+      <h1>TITRE DE L'OPERATION</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="left-icon icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="right-icon icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </section>
+    <hr class="hr" />
+    <h1 id="promotion-hr" class="promotion-hr">LES PROMOTIONS</h1>
+    <section class="promotion">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="left-icon-2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </svg>
+
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-2">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-3 text-3-2">299,99 $</p>
+
+        <hr class="hr-2" />
+        <a href="04-fiche-prod.html" target="_blank"
+          ><button class="btn">AJOUTER AU PANIER</button></a
+        >
+      </div>
+      <div class="promo-box promo-box-3">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3 text3-3">299,99 $</p>
+
+        <div class="sold">
+          <p class="text-3">299,99 $</p>
+        </div>
+        <p class="sold-box">- 20%</p>
+      </div>
+      <div class="promo-box promo-box-4">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <a href="04-fiche-prod.html" target="_blank"
+          ><button class="btn">AJOUTER AU PANIER</button></a
+        >
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="right-icon-2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </section>
+    <a class="btn-promo" href="03-catalogue-vendeur.html" target="_blank"
+      >VOIR TOUTES LES PROMOTIONS</a
+    >
+    <hr class="hr" />
+    <h1 class="promotion-hr fournisseurs-hr">LES FOURNISSEURS</h1>
+    <section class="fournisseur">
+      <div class="fourni-box">
+        <img src="im-1.png" class="fourni-img" alt="fourni-img" />
+        <button class="fourni-btn">Versele-Laga</button>
+      </div>
+
+      <div class="fourni-box">
+        <img src="im-2.png" class="fourni-img" alt="fourni-img" />
+        <button class="fourni-btn">Spear & Jackson</button>
+      </div>
+
+      <div class="fourni-box">
+        <img src="im-3.png" class="fourni-img" alt="fourni-img" />
+        <button class="fourni-btn">Europet Bermina</button>
+      </div>
+
+      <div class="fourni-box">
+        <img src="im-4.png" class="fourni-img" alt="fourni-img" />
+        <button class="fourni-btn">Vigor & Sage</button>
+      </div>
+
+      <div class="fourni-box">
+        <img src="im-5.png" class="fourni-img" alt="fourni-img" />
+        <button class="fourni-btn">VillaVerde</button>
+      </div>
+    </section>
+    <a
+      href="07-fournisseurs.html"
+      target="_blank"
+      class="btn-promo fourni-btn-2"
+      >VOIR TOUTES LES FOURNISSEUR</a
+    >
+    <hr class="hr" />
+    <h1 class="promotion-hr marque-btn">LES MARQUES PROPRES</h1>
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <a href="#promotion-hr"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="up-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        /></svg
+    ></a>
+    <footer class="footer">
+      <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea footer-logo" />
+      <div class="grid">
+        <a href="" class="p1">INFORMATIONS</a>
+        <a href="06-Mon-compte.html" class="p2" target="_blank"
+          >ESPACE PERSONNEL</a
+        >
+        <a href="07-fournisseurs.html" class="p3" target="_blank"
+          >ESPACE FOURNISSEUR</a
+        >
+        <a href="08-page-404.html" class="p4" target="_blank"
+          >Mentions Légales</a
+        >
+        <a href="06-Mon-compte.html" class="p5" target="_blank">Mon compte</a>
+        <a href="06-Mon-compte.html" class="p6" target="_blank">Mon compte</a>
+        <a href="#" class="p7">CGV</a>
+        <a href="#" class="p8">CGV</a>
+      </div>
+      <p class="last">&copy; 2017 SAS Sévéa, tous droits réservés</p>
+    </footer>
+  </body>
+</html>

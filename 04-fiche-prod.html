@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-fiche-prod</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 0.8vw;
+      }
+      body {
+        font-family:/* "Inter", */ sans-serif;
+        color: #000;
+        line-height: 1;
+        width: 124rem;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(AdobeStock_112281079.jpeg);
+        background-size: cover;
+        background-position: -50%;
+        position: relative;
+        /* padding-bottom: 500px; */
+        height: 37rem;
+      }
+      .white-1 {
+        height: 8.5rem;
+        width: 125rem;
+        background-color: #fff;
+        position: relative;
+      }
+      .logo-sevea {
+        width: 24rem;
+        height: 9rem;
+        position: absolute;
+        transform: translate(10rem, 1.4rem);
+      }
+      .connexion {
+        font-size: 1.7rem;
+        display: flex;
+        gap: 7.2%;
+        position: absolute;
+        font-weight: bold;
+        transform: translate(450%, 150%);
+        color: #679b1c;
+        text-decoration: none;
+      }
+      .connexion:hover {
+        color: #52781c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .logo-panier {
+        width: 3.9rem;
+        position: absolute;
+        transform: translate(2650%, 30%);
+      }
+      .price-1 {
+        /* font-size: xx-large; */
+        position: absolute;
+        transform: translate(1867%, 100%);
+        color: #679b1c;
+      }
+      .stock {
+        font-weight: bold;
+        /* font-size: large; */
+        color: #679b1c;
+        position: absolute;
+        transform: translate(2265%, 300%);
+      }
+
+      .white-2 {
+        height: 3rem;
+        width: 65.5rem;
+        background-color: #fff;
+      }
+      .white-3 {
+        margin-left: 10rem;
+        margin-right: 70.5rem;
+        height: 1.8rem;
+        background-color: #fff;
+      }
+      .vague {
+        width: 124rem;
+        height: 8.5rem;
+        position: absolute;
+        transform: translate(0, -30.9rem);
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .box input {
+        padding-left: 1.8rem;
+
+        border: none;
+        position: relative;
+        height: 5rem;
+        width: 32rem;
+      }
+      .down-icon {
+        position: absolute;
+        width: 3rem;
+        transform: translate(670%, 0%);
+        color: #679b1c;
+      }
+      .box button {
+        /* padding: 1.5rem 5.5rem; */
+        height: 5rem;
+        width: 17.5rem;
+        background-color: #7f408f;
+        border: none;
+        color: #fff;
+      }
+      .box button:hover {
+        background-color: #86229f;
+        cursor: pointer;
+      }
+      .hr {
+        margin: 8% 0.2%;
+        position: relative;
+      }
+      footer {
+        position: absolute;
+
+        margin: 23rem 0;
+        margin-bottom: 16rem;
+        background-color: #d8d5d5;
+        width: 124rem;
+        height: 43rem;
+      }
+      .footer-logo {
+        position: absolute;
+        transform: translate(210%, 20%);
+      }
+      .grid {
+        margin: 2% 10%;
+        display: grid;
+        width: 60%;
+        height: 40%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        transform: translate(19%, 100%);
+        justify-content: center;
+        font-size: 120%;
+        column-gap: 10%;
+        /* justify-items: center; */
+      }
+      .p7 {
+        grid-column: 1/-1;
+        color: #000;
+      }
+      .p1,
+      .p2,
+      .p3 {
+        color: #679b1c;
+      }
+      .p4,
+      .p5,
+      .p6,
+      .p8 {
+        color: #000;
+      }
+      .last {
+        position: absolute;
+        transform: translate(285%, 37rem);
+        color: #7f408f;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .famille {
+        color: #679b1c;
+        margin-left: 4%;
+      }
+      .span {
+        font-style: italic;
+        margin-top: 1.5%;
+      }
+      .bare {
+        color: gray;
+        margin-top: 1.5%;
+      }
+      .big-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5% 6%;
+        /* margin-left: 10%; */
+      }
+
+      .im-barba {
+        width: 20%;
+        margin-right: 3%;
+        margin-top: 3%;
+        border: 5px solid white;
+        box-shadow: 0px 2px 1.2px 0px rgb(187, 186, 186);
+      }
+      .big-im-barba {
+        width: 50rem;
+        border: 15px solid white;
+      }
+      .big-right {
+        /* background-color: #d8d5d5; */
+        padding: 5%;
+        box-shadow: 0px 2px 1px rgb(211 211 211);
+      }
+      .barbecue {
+        font-size: 3rem;
+        width: 28rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 4%;
+      }
+      .paragraph {
+        width: 42rem;
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+        margin-bottom: 6%;
+      }
+      .grey {
+        color: rgb(173, 172, 172);
+        font-size: 1.6rem;
+      }
+      .down-icon-2 {
+        width: 12%;
+        color: #679b1c;
+        font-weight: bold;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .purple {
+        color: #7f408f;
+        font-size: 1.2rem;
+      }
+      .choix-1 {
+        display: flex;
+        width: 65%;
+        padding: 4%;
+        /* padding-right: 20%; */
+        margin: 6% 0;
+        border: 1.5px solid gray;
+        justify-content: space-between;
+        margin-bottom: 14%;
+      }
+      .plus {
+        display: flex;
+        gap: 10%;
+      }
+      .line {
+        padding: 0 4%;
+        border-bottom: 1px solid grey;
+      }
+      .little-right {
+        text-align: right;
+      }
+      .dispo {
+        color: #679b1c;
+        font-weight: bold;
+        margin-bottom: 6%;
+      }
+      .soldd {
+        padding: 2%;
+        border-radius: 6%;
+        background-color: #679b1c;
+        color: #fff;
+        width: 19%;
+        margin-left: 80%;
+        margin-bottom: 10%;
+      }
+      .purple1 {
+        font-weight: bold;
+        font-size: 1.8rem;
+        margin-bottom: 100px;
+      }
+      .purple2 {
+        font-weight: bold;
+      }
+      .bar {
+        color: grey;
+        margin-top: 2%;
+        text-decoration: line-through;
+      }
+      .btn {
+        color: white;
+        background-color: #7f408f;
+
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 4%;
+        width: 27rem;
+        height: 5rem;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      .btn:hover {
+        background-color: #781291;
+      }
+      .mode {
+        color: gray;
+      }
+      .mode::after {
+        content: " PLATEFORME";
+        color: #7f408f;
+        font-weight: bold;
+      }
+      .decription {
+        width: 50%;
+      }
+      .decription {
+        display: flex;
+        width: 48%;
+        padding: 4%;
+        /* padding-bottom: 0; */
+        margin: 6% 0;
+        border-top: 1.5px solid rgb(156, 153, 153);
+        border-right: 1.5px solid rgb(156, 153, 153);
+        justify-content: space-between;
+        /* margin-bottom: 14%; */
+      }
+      .decription p {
+        color: #679b1c;
+        font-weight: bold;
+        margin-top: 6%;
+      }
+      .decription svg {
+        width: 3rem;
+      }
+      .flex {
+        display: flex;
+      }
+      .fiche {
+        border: none;
+        width: 52%;
+        border-bottom: 1.5px solid rgb(156, 153, 153);
+        /* border-left: 1.5px solid gray; */
+      }
+      .fiche p {
+        color: rgb(156, 153, 153);
+      }
+      .fiche svg {
+        color: rgb(156, 153, 153);
+        width: 3rem;
+      }
+      .lorem {
+        margin-bottom: 6%;
+        line-height: 120%;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="white-1">
+          <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea" />
+          <a class="connexion" href="00-landing.html" target="_blank">
+            <p>connexion</p>
+            <p>|</p>
+            <p>Inscription</p>
+          </a>
+          <img src="ICON 1.svg" alt="logo-panier" class="logo-panier" />
+          <h2 class="price-1">999,00 $</h2>
+          <p class="stock">50 articles</p>
+        </div>
+        <div class="white-2"></div>
+        <div class="white-3"></div>
+        <div class="box">
+          <input placeholder="Que recherchez-vous ?" />
+          <input placeholder="Famille de produit" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <a href="02-catalogue.html" target="_blank"
+            ><button>RECHARCHER</button></a
+          >
+        </div>
+      </div>
+
+      <img src="Vague.png" alt="Vague logo" class="vague" />
+    </header>
+    <div class="span">
+      <span class="famille">Famille de produit / </span
+      ><span> Nom du produit</span>
+    </div>
+    <hr class="bare" />
+
+    <div class="big-container">
+      <div class="big-left">
+        <img src="im-barba.png" alt="im-barba" class="im-barba big-im-barba" />
+        <div class="barba-flex">
+          <img src="im-barba.png" alt="im-barba" class="im-barba" />
+          <img src="im-barba.png" alt="im-barba" class="im-barba" />
+        </div>
+      </div>
+      <div class="big-right">
+        <p class="barbecue">barbecue américan 3 bruleurs + side</p>
+        <p class="paragraph">
+          Illud autem non dubitateur quod cum esset alliquando virtutum omnium
+          domicillium Roma, ingenuos advenas
+        </p>
+        <h5 class="grey">FOURNISSEUR</h5>
+        <hr class="hr" />
+        <div class="grid2">
+          <div>
+            <h5 class="purple">COULEUR :</h5>
+            <div class="choix-1">
+              <p>Choix 1</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="down-icon-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                ></path>
+              </svg>
+            </div>
+            <div class="plus">
+              <h5 class="purple">QUANTITE :</h5>
+              <span class="purple"> - </span> <span class="purple line">1</span>
+              <span class="purple">+</span>
+            </div>
+          </div>
+          <div class="little-right">
+            <p class="dispo">DISPONIBLE</p>
+            <p class="soldd">- 20%</p>
+            <div class="purple__container">
+              <sapn class="purple1 purple">299,</sapn>
+              <span class="purple purple2">99 $ HT</span>
+            </div>
+            <p class="bar">299,99 $ HT</p>
+          </div>
+        </div>
+        <hr class="hr" />
+        <a href="05-panier.html" target="_blank"
+          ><button class="btn">AJOUTER AU PANIER</button></a
+        >
+        <p class="mode">mode de livraison :</p>
+        <hr class="hr" />
+        <div class="flex">
+          <div class="decription">
+            <p>DESCRIPTION</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="down-icon-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="decription fiche">
+            <p>FICHE TECHNIQUE</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="down-icon-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi,
+          ipsam nihil deleniti mollitia ea ullam dignissimos fuga magnam
+          deserunt velit. Nemo perferendis aliquam inventore. Sequi velit error
+          eligendi. Nemo, tempore repellendus inventore impedit possimus non,
+          ducimus nulla, quae suscipit iste cupiditate dolorum
+        </p>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          illo porro omnis deleniti excepturi veritatis saepe hic totam
+          explicabo obcaecati rerum in fugiat, eveniet quasi placeat dignissimos
+          nulla quod debitis. Nemo perferendis aliquam inventore. Sequi velit
+          error eligendi. Nemo, tempore repellendus inventore impedit possimus
+          non, ducimus nulla, quae suscipit iste cupiditate
+        </p>
+        <p class="lorem">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et facilis
+          enim id assumenda debitis reprehenderit magnam eligendi recusandae
+          repellendus inventore impedit possimus
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea footer-logo" />
+      <div class="grid">
+        <a href="" class="p1">INFORMATIONS</a>
+        <a href="06-Mon-compte.html" class="p2" target="_blank"
+          >ESPACE PERSONNEL</a
+        >
+        <a href="07-fournisseurs.html" class="p3" target="_blank"
+          >ESPACE FOURNISSEUR</a
+        >
+        <a href="08-page-404.html" class="p4" target="_blank"
+          >Mentions Légales</a
+        >
+        <a href="06-Mon-compte.html" class="p5" target="_blank">Mon compte</a>
+        <a href="06-Mon-compte.html" class="p6" target="_blank">Mon compte</a>
+        <a href="#" class="p7">CGV</a>
+        <a href="#" class="p8">CGV</a>
+      </div>
+      <p class="last">&copy; 2017 SAS Sévéa, tous droits réservés</p>
+    </footer>
+  </body>
+</html>

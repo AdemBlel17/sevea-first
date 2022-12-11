@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-panier</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 0.8vw;
+      }
+      body {
+        font-family:/* "Inter", */ sans-serif;
+        color: #000;
+        line-height: 1;
+        width: 124rem;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(AdobeStock_112281079.jpeg);
+        background-size: cover;
+        background-position: -50%;
+        position: relative;
+        /* padding-bottom: 500px; */
+        height: 37rem;
+      }
+      .white-1 {
+        height: 8.5rem;
+        width: 125rem;
+        background-color: #fff;
+        position: relative;
+      }
+      .logo-sevea {
+        width: 24rem;
+        height: 9rem;
+        position: absolute;
+        transform: translate(10rem, 1.4rem);
+      }
+      .connexion {
+        font-size: 1.7rem;
+        display: flex;
+        gap: 7.2%;
+        position: absolute;
+        font-weight: bold;
+        transform: translate(450%, 150%);
+        color: #679b1c;
+        text-decoration: none;
+      }
+      .connexion:hover {
+        color: #52781c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .logo-panier {
+        width: 3.9rem;
+        position: absolute;
+        transform: translate(2650%, 30%);
+      }
+      .price-1 {
+        /* font-size: xx-large; */
+        position: absolute;
+        transform: translate(1867%, 100%);
+        color: #679b1c;
+      }
+      .stock {
+        font-weight: bold;
+        /* font-size: large; */
+        color: #679b1c;
+        position: absolute;
+        transform: translate(2265%, 300%);
+      }
+
+      .white-2 {
+        height: 3rem;
+        width: 65.5rem;
+        background-color: #fff;
+      }
+      .white-3 {
+        margin-left: 10rem;
+        margin-right: 70.5rem;
+        height: 1.8rem;
+        background-color: #fff;
+      }
+      .vague {
+        width: 124rem;
+        height: 8.5rem;
+        position: absolute;
+        transform: translate(0, -30.9rem);
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .box input {
+        padding-left: 1.8rem;
+
+        border: none;
+        position: relative;
+        height: 5rem;
+        width: 32rem;
+      }
+      .down-icon {
+        position: absolute;
+        width: 3rem;
+        transform: translate(670%, 0%);
+        color: #679b1c;
+      }
+      .box button {
+        /* padding: 1.5rem 5.5rem; */
+        height: 5rem;
+        width: 17.5rem;
+        background-color: #7f408f;
+        border: none;
+        color: #fff;
+      }
+      .box button:hover {
+        background-color: #86229f;
+        cursor: pointer;
+      }
+      .hr {
+        margin: 5% 3.2%;
+        position: relative;
+      }
+      .H3 {
+        color: gray;
+        position: absolute;
+        font-size: 2.4rem;
+        background-color: #fff;
+        transform: translate(47rem, -7.5rem);
+        margin-bottom: 5%;
+        padding: 0 2%;
+        letter-spacing: 1px;
+      }
+      footer {
+        position: absolute;
+
+        margin: 23rem 0;
+        margin-bottom: 16rem;
+        background-color: #d8d5d5;
+        width: 124rem;
+        height: 43rem;
+      }
+      .footer-logo {
+        position: absolute;
+        transform: translate(210%, 20%);
+      }
+      .grid {
+        margin: 2% 10%;
+        display: grid;
+        width: 60%;
+        height: 40%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        transform: translate(19%, 100%);
+        justify-content: center;
+        font-size: 120%;
+        column-gap: 10%;
+        /* justify-items: center; */
+      }
+      .p7 {
+        grid-column: 1/-1;
+        color: #000;
+      }
+      .p1,
+      .p2,
+      .p3 {
+        color: #679b1c;
+      }
+      .p4,
+      .p5,
+      .p6,
+      .p8 {
+        color: #000;
+      }
+      .last {
+        position: absolute;
+        transform: translate(285%, 37rem);
+        color: #7f408f;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      nav {
+        display: flex;
+        width: 116rem;
+        margin: 5% auto;
+        background-color: #e3dfdf;
+        justify-content: space-between;
+        padding: 0 5%;
+      }
+      nav p {
+        color: rgb(174, 173, 173);
+        font-size: 3.4rem;
+        margin: auto auto;
+      }
+      .parallelogram {
+        position: relative;
+        display: flex;
+        width: 35%;
+        height: 100%;
+        transform: skew(-30deg);
+        background: #679b1c;
+        color: #fff;
+        padding: 1% 0;
+      }
+      .rotate {
+        /* position: absolute; */
+        transform: skew(30deg);
+        display: inline-block;
+        margin: auto auto;
+        /* align-self: center; */
+      }
+      .big-container {
+        margin: 2% 8%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+      }
+      .big-left {
+        /* background-color: beige; */
+        box-shadow: 0px 2px 1px rgb(211 211 211);
+        padding: 3% 15%;
+      }
+      .big-right {
+        /* background-color: aliceblue; */
+        padding: 3% 5%;
+        box-shadow: 0px 2px 1px rgb(211 211 211);
+        height: fit-content;
+        position: relative;
+      }
+      .big-left h5 {
+        color: #679b1c;
+        margin: 4% 0;
+        font-weight: 500;
+        margin-bottom: 8%;
+      }
+      #in2 {
+        margin-left: 5%;
+      }
+      .big-left h2 {
+        color: #7f408f;
+        font-weight: bold;
+      }
+      .in-text {
+        padding: 1.5rem;
+        margin: 3% 0;
+        height: 5rem;
+        width: 38rem;
+      }
+      .in-text1,
+      .in-text2 {
+        border: 1px solid rgb(0, 110, 0);
+      }
+      .in-text8 {
+        border: 1px solid rgb(189, 1, 1);
+        /* font-weight: bold; */
+        /* position: relative; */
+      }
+      .anis::before {
+        content: "Remplir ce champs";
+        position: absolute;
+        top: 3rem;
+        right: -3rem;
+        color: red;
+        font-weight: bold;
+      }
+      .anis {
+        position: relative;
+      }
+      .oblig {
+        display: flex;
+        justify-content: end;
+        margin-right: -4rem;
+      }
+      .big-right h2 {
+        text-align: center;
+        color: #7f408f;
+        margin-bottom: 5%;
+      }
+      .hr-2 {
+        margin: 1.2% 5.2%;
+      }
+      .barb-img {
+        width: 20%;
+        height: 8%;
+        margin: 0% 5.6%;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .barb-text1,
+      .barb-text2 {
+        font-size: 150%;
+        width: 90%;
+      }
+      .barb-text2::after {
+        content: "Fournisseur";
+        color: gray;
+        font-weight: bold;
+        /* font-size: 20%; */
+      }
+      .right {
+        margin: auto 10%;
+      }
+      .purple {
+        color: #7f408f;
+        font-weight: bold;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+      }
+      .line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4%;
+        margin-left: 1.8rem;
+      }
+      .recap {
+        color: #679b1c;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin: 5% 2rem;
+      }
+      .end {
+        color: #679b1c;
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+      }
+      .btn {
+        color: #fff;
+        background-color: #7f408f;
+        font-size: large;
+        width: 48rem;
+        height: 5rem;
+        position: absolute;
+        transform: translate(142%, -360%);
+        border-radius: 12px;
+        border: none;
+      }
+      .btn:hover {
+        background-color: #7f1798;
+        cursor: pointer;
+      }
+      nav:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="white-1">
+          <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea" />
+          <a class="connexion" href="00-landing.html" target="_blank">
+            <p>connexion</p>
+            <p>|</p>
+            <p>Inscription</p>
+          </a>
+          <img src="ICON 1.svg" alt="logo-panier" class="logo-panier" />
+          <h2 class="price-1">999,00 $</h2>
+          <p class="stock">50 articles</p>
+        </div>
+        <div class="white-2"></div>
+        <div class="white-3"></div>
+        <div class="box">
+          <input placeholder="Que recherchez-vous ?" />
+          <input placeholder="Famille de produit" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <a href="02-catalogue.html" target="_blank"
+            ><button>RECHARCHER</button></a
+          >
+        </div>
+      </div>
+
+      <img src="Vague.png" alt="Vague logo" class="vague" />
+    </header>
+    <hr class="hr" />
+    <h3 class="H3">IDENTIFICATION</h3>
+    <nav>
+      <p class="panier">Panier</p>
+      <p class="parallelogram">
+        <span class="rotate">Identification</span>
+      </p>
+      <p class="validation">Validation</p>
+    </nav>
+    <div class="big-container">
+      <div class="big-left">
+        <h2>IDENTIFICATION</h2>
+        <h5>ADRESSE DE LIVRAISON</h5>
+        <input id="in1" type="radio" />
+        <label for="in1">Monsieur</label>
+        <input id="in2" type="radio" checked />
+        <label for="in2">Madame</label>
+        <br />
+        <input class="in-text in-text1" type="text" value="Laura" />
+        <br />
+        <input class="in-text in-text2" type="text" value="MARTIN" />
+        <br />
+        <input class="in-text" type="text" placeholder="Société" />
+        <br />
+        <input class="in-text" type="text" placeholder="Téléphone*" required />
+        <br />
+        <input class="in-text" type="text" placeholder="Adresse*" required />
+        <br />
+        <input class="in-text" type="text" placeholder="Complément d'adresse" />
+        <br />
+        <input
+          class="in-text"
+          type="text"
+          placeholder="Code Postal*"
+          required
+        />
+        <br />
+        <div class="anis">
+          <input class="in-text in-text8" type="text" value="Ville*" required />
+        </div>
+
+        <input class="in-text" type="text" placeholder="FRANCE" />
+        <br />
+        <p class="oblig">* Champs obligatoires</p>
+      </div>
+      <div class="big-right">
+        <h2>MON PANIER</h2>
+        <hr class="hr-2" />
+        <div class="flex">
+          <img
+            class="barb-img"
+            alt="barb-img"
+            src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <div class="right">
+            <p class="barb-text1">Barbecue américain</p>
+            <span class="barb-text2">3 bruleurs -</span>
+            <!-- <span>Fournisseur</span> -->
+            <h5 class="purple">2 + 299,99 $</h5>
+          </div>
+        </div>
+        <hr class="hr-2" />
+        <div class="flex">
+          <img
+            class="barb-img"
+            alt="barb-img"
+            src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <div class="right">
+            <p class="barb-text1">Barbecue américain</p>
+            <span class="barb-text2">3 bruleurs -</span>
+            <!-- <span>Fournisseur</span> -->
+            <h5 class="purple">2 + 299,99 $</h5>
+          </div>
+        </div>
+        <hr class="hr-2" />
+        <div class="flex">
+          <img
+            class="barb-img"
+            alt="barb-img"
+            src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <div class="right">
+            <p class="barb-text1">Barbecue américain</p>
+            <span class="barb-text2">3 bruleurs -</span>
+            <!-- <span>Fournisseur</span> -->
+            <h5 class="purple">2 + 299,99 $</h5>
+          </div>
+        </div>
+        <hr class="hr-2" />
+        <p class="recap">RECAPITULATIF</p>
+        <div class="line">
+          <p class="purple">Achats :</p>
+          <p class="purple">299,99 $</p>
+        </div>
+        <div class="line">
+          <p class="purple">Total :</p>
+          <p class="purple">299,99 $</p>
+        </div>
+        <p class="end">Inclut : XX,XX $ TVA</p>
+      </div>
+    </div>
+    <a href="06-Mon-compte.html" target="_blank" class="alink"
+      ><button class="btn">VALIDER</button></a
+    >
+    <footer class="footer">
+      <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea footer-logo" />
+      <div class="grid">
+        <a href="" class="p1">INFORMATIONS</a>
+        <a href="06-Mon-compte.html" class="p2" target="_blank"
+          >ESPACE PERSONNEL</a
+        >
+        <a href="07-fournisseurs.html" class="p3" target="_blank"
+          >ESPACE FOURNISSEUR</a
+        >
+        <a href="08-page-404.html" class="p4" target="_blank"
+          >Mentions Légales</a
+        >
+        <a href="06-Mon-compte.html" class="p5" target="_blank">Mon compte</a>
+        <a href="06-Mon-compte.html" class="p6" target="_blank">Mon compte</a>
+        <a href="#" class="p7">CGV</a>
+        <a href="#" class="p8">CGV</a>
+      </div>
+      <p class="last">&copy; 2017 SAS Sévéa, tous droits réservés</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-catalogue-vendeur</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 0.8vw;
+      }
+      body {
+        font-family:/* "Inter", */ sans-serif;
+        color: #000;
+        line-height: 1;
+        width: 124rem;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(AdobeStock_112281079.jpeg);
+        background-size: cover;
+        background-position: -50%;
+        position: relative;
+        /* padding-bottom: 500px; */
+        height: 37rem;
+      }
+      .white-1 {
+        height: 8.5rem;
+        width: 125rem;
+        background-color: #fff;
+        position: relative;
+      }
+      .logo-sevea {
+        width: 24rem;
+        height: 9rem;
+        position: absolute;
+        transform: translate(10rem, 1.4rem);
+      }
+      .connexion {
+        font-size: 1.7rem;
+        display: flex;
+        gap: 7.2%;
+        position: absolute;
+        font-weight: bold;
+        transform: translate(450%, 150%);
+        color: #679b1c;
+        text-decoration: none;
+      }
+      .connexion:hover {
+        color: #52781c;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .logo-panier {
+        width: 3.9rem;
+        position: absolute;
+        transform: translate(2650%, 30%);
+      }
+      .price-1 {
+        /* font-size: xx-large; */
+        position: absolute;
+        transform: translate(1867%, 100%);
+        color: #679b1c;
+      }
+      .stock {
+        font-weight: bold;
+        /* font-size: large; */
+        color: #679b1c;
+        position: absolute;
+        transform: translate(2265%, 300%);
+      }
+
+      .white-2 {
+        height: 3rem;
+        width: 65.5rem;
+        background-color: #fff;
+      }
+      .white-3 {
+        margin-left: 10rem;
+        margin-right: 70.5rem;
+        height: 1.8rem;
+        background-color: #fff;
+      }
+      .vague {
+        width: 124rem;
+        height: 8.5rem;
+        position: absolute;
+        transform: translate(0, -30.9rem);
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .box input {
+        padding-left: 1.8rem;
+
+        border: none;
+        position: relative;
+        height: 5rem;
+        width: 32rem;
+      }
+      .down-icon {
+        position: absolute;
+        width: 3rem;
+        transform: translate(670%, 0%);
+        color: #679b1c;
+      }
+      .box button {
+        /* padding: 1.5rem 5.5rem; */
+        height: 5rem;
+        width: 17.5rem;
+        background-color: #7f408f;
+        border: none;
+        color: #fff;
+      }
+      .box button:hover {
+        background-color: #86229f;
+        cursor: pointer;
+      }
+      .hr {
+        margin: 5% 5.2%;
+        position: relative;
+      }
+      .result-hr {
+        color: gray;
+        position: absolute;
+        font-size: 140%;
+        background-color: #fff;
+        transform: translate(145%, -7rem);
+        margin-bottom: 5%;
+        padding: 0 2%;
+      }
+      nav {
+        color: #679b1c;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        font-weight: bold;
+        transform: translate(380%, 0%);
+      }
+
+      .select {
+        width: 32%;
+        height: 3rem;
+        text-align: center;
+      }
+      .left {
+        width: 30rem;
+        height: fit-content;
+        margin: 3%;
+        margin-right: 0;
+        padding: 2%;
+        box-shadow: -0.2px 1px 2px 1px rgb(243, 238, 238);
+      }
+      .left h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #679b1c;
+        margin-bottom: 20%;
+      }
+      .down-icon-2 {
+        width: 2.4rem;
+        color: #679b1c;
+        margin-bottom: 1rem;
+      
+      }
+
+      .icon-box {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        /* font-size: 2rem; */
+        align-items: center;
+        margin-top: 12%;
+      }
+      .left input {
+        margin: 3% 2%;
+      }
+      .range {
+        width: 95%;
+        /* color: #7f408f; */
+      }
+      
+      .maxmin {
+        display: flex;
+        justify-content: space-between;
+        margin: 2%;
+      }
+      .hr-2 {
+        margin: 3.2% -2.8%;
+      }
+
+      .up-icon {
+    position: absolute;
+    transform: translate(110rem, 4rem);
+    width: 3.4%;
+    color: #679b1c;
+}
+      .up-icon:hover{
+        color: #52781c;
+      }
+      footer {
+        position: absolute;
+        margin: 23rem 0;
+        margin-bottom: 16rem;
+        background-color: #d8d5d5;
+        width: 124rem;
+        height: 43rem;
+      }
+      .footer-logo {
+        position: absolute;
+        transform: translate(210%, 20%);
+      }
+      .grid {
+        margin: 2% 10%;
+        display: grid;
+        width: 60%;
+        height: 40%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        position: absolute;
+        transform: translate(19%, 100%);
+        justify-content: center;
+        font-size: 120%;
+        column-gap: 10%;
+        /* justify-items: center; */
+      }
+      .p7 {
+        grid-column: 1/-1;
+        color: #000;
+      }
+      .p1,
+      .p2,
+      .p3 {
+        color: #679b1c;
+      }
+      .p4,
+      .p5,
+      .p6,
+      .p8 {
+        color: #000;
+      }
+      .last {
+        position: absolute;
+        transform: translate(285%, 37rem);
+        color: #7f408f;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+       
+       cursor: pointer;
+       text-decoration: underline;
+     }
+      
+        .barb-img {
+    width: 20rem;
+    height: 16rem;
+    margin-bottom: 1.5rem;
+}
+.hr-2 {
+    margin: 1rem 0.2rem;
+}
+
+      
+      .text-1-marque {
+        /* max-width: 50%;
+        line-height: 120%;
+        margin: 8% auto; */
+        margin: 3% auto;
+    font-size: 1.6rem;
+    width: 15rem;
+      }
+      .text-1 {
+    /* max-width: 70%; */
+    margin: 3% auto;
+    font-size: 1.6rem;
+    width: 15rem;
+}
+      /* .text-2 {
+        color: #bab6b6;
+        margin: 4% auto;
+      } */
+      .text-2 {
+    color: #c9c6c6;
+    margin: 1.6rem auto;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+      /* .text-3 {
+        font-size: 130%;
+        margin-top: 10%;
+        position: relative;
+        color: purple;
+      } */
+      .text-3 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+    position: relative;
+    color: rgb(118, 44, 118);
+}
+      .promo-box {
+        width: 29rem;
+        height: fit-content;
+        /* background-color: #cad9b5; */
+        text-align: center;
+        padding: 2.6%;
+        box-shadow: -2px 5px 5px 0 #0002;
+      }
+      .marque {
+        display: flex;
+        margin: 4% auto;
+        margin-left: 5%;
+      }
+      .middle{
+        display: flex;
+      }
+      /* .right{
+        margin: auto auto;
+        margin-left: 3%;
+      } */
+      .least{
+        color: gray;
+        letter-spacing: 12px;
+        transform: translate(59%,-50%);
+      }
+      .least-4{
+        color: #679b1c;
+        transform: translate(66.6%,-150%);
+      }
+      .bouzidi{
+        height: 11rem;
+    overflow-y: scroll;
+      }
+      .h5h{
+        font-size: 1.6rem;
+        font-weight: 200;
+      }
+      .dog-box{
+        background-color: #e4e4e4;
+        margin: 5% auto;
+        padding: 3% 20%;
+        text-align: center;
+        padding-top: 8%;
+        position: relative;
+        width: 112rem;
+        height: 28rem;
+      }
+      .dog-box h2{
+        color: #7f408f;
+        font-weight: bold;
+        font-size: 2rem;
+    margin-top: 6%;
+}
+      
+      .dog-box p{
+        width: 45rem;
+        color: rgb(58, 57, 57);
+        margin: 2rem auto;
+        font-size: 1.3rem;
+        line-height: 1.6;
+      
+      }
+      .dog-cercle{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-7rem,-29rem);
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="white-1">
+          <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea" />
+          <a class="connexion" href="00-landing.html" target="_blank">
+            <p>connexion</p>
+            <p>|</p>
+            <p>Inscription</p>
+          </a>
+          <img src="ICON 1.svg" alt="logo-panier" class="logo-panier" />
+          <h2 class="price-1">999,00 $</h2>
+          <p class="stock">50 articles</p>
+        </div>
+        <div class="white-2"></div>
+        <div class="white-3"></div>
+        <div class="box">
+          <input placeholder="Que recherchez-vous ?" />
+          <input placeholder="Famille de produit" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+
+          <a href="02-catalogue.html" target="_blank"
+            ><button>RECHARCHER</button></a
+          >
+        </div>
+      </div>
+
+      <img src="Vague.png" alt="Vague logo" class="vague" />
+    </header>
+    <div class="dog-box">
+      <h2>VERSELE-LAGA</h2>
+      <P>Inter haec Orfitus praefecti potestate regebat urbem aeternam ultra modum delatae gigitatis sese efferens insolenter, vir quidem prudens et forensium negotiorum oppido granus, sed splendore liberalium doctrinarum minus </P>
+      <img class="dog-cercle" src="im-dog.png" alt="dog-cercle">
+    </div>
+    <hr class="hr" />
+    <h1 id="result-hr" class="result-hr">RESULTATS DE VOTRE RECHERCHE</h1>
+    <nav>
+      <p>21 ARTICLES</p>
+      <p>|</p>
+      <p>AFFICHER :</p>
+      <select class="select">
+        <option>12</option>
+        <option>10</option>
+        <option>08</option>
+      </select>
+    </nav>
+    <section class="middle">
+
+      <div class="left">
+        <h3>FILTRER PAR</h3>
+      <div class="leftbox">
+        <div class="icon-box">
+          <h5 class="h5h">Catégories</h5>
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down-icon-2"
+            >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            ></path>
+          </svg>
+        </div>
+        <div class="bouzidi">
+
+          <hr class="hr" />
+          <input type="checkbox" name="catégorie 1" />
+          <label>catégorie 1</label>
+          <br />
+          <input type="checkbox" name="catégorie 2" />
+        <label>catégorie 2</label>
+        <br />
+        <input type="checkbox" name="catégorie 3" />
+        <label>catégorie 3</label>
+        <br />
+        <input type="checkbox" name="catégorie 4" />
+        <label>catégorie 4</label>
+        <br />
+        <input type="checkbox" name="catégorie 5" />
+        <label>catégorie 5</label>
+        <br />
+        <input type="checkbox" name="catégorie 4" />
+        <label>catégorie 6</label>
+        <br />
+        <input type="checkbox" name="catégorie 4" />
+        <label>catégorie 7</label>
+        <br />
+        <input type="checkbox" name="catégorie 4" />
+        <label>catégorie 8</label>
+        <br />
+      </div>
+      </div>
+      <div class="leftbox">
+        <!-- <h3>FILTRER PAR</h3> -->
+        <div class="icon-box">
+          <h5 class="h5h">Prix</h5>
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="down-icon-2"
+          >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            ></path>
+          </svg>
+        </div>
+        <hr class="hr" />
+        <input class="range" type="range" min="1$" max="6$" />
+        <div class="maxmin">
+          <p>1$</p>
+          <p>6$</p>
+        </div>
+       
+        </div>
+      <div class="leftbox">
+        <!-- <h3>FILTRER PAR</h3> -->
+        <div class="icon-box">
+          <h5 class="h5h">Filtre 2</h5>
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="down-icon-2"
+          >
+          <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          ></path>
+        </svg>
+      </div>
+      <hr class="hr" />
+      <input type="checkbox" name="catégorie 1" />
+      <label>choix 1</label>
+      <br />
+      <input type="checkbox" name="catégorie 2" />
+      <label>choix 2</label>
+      <br />
+      <input type="checkbox" name="catégorie 3" />
+      <label>choix 3</label>
+      <br />
+      <input type="checkbox" name="catégorie 4" />
+      <label>choix 4</label>
+      <br />
+    </div>
+    <div class="leftbox">
+      <!-- <h3>FILTRER PAR</h3> -->
+      <div class="icon-box">
+        <h5 class="h5h">Filtre 3</h5>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="down-icon-2"
+        >
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+        ></path>
+      </svg>
+    </div>
+    <hr class="hr" />
+    <input type="checkbox" name="catégorie 1" />
+    <label>choix 1</label>
+    <br />
+    <input type="checkbox" name="catégorie 2" />
+    <label>choix 2</label>
+    <br />
+    <input type="checkbox" name="catégorie 3" />
+    <label>choix 3</label>
+    <br />
+    <input type="checkbox" name="catégorie 4" />
+        <label>choix 4</label>
+        <br />
+      </div>
+      <div class="leftbox">
+        <!-- <h3>FILTRER PAR</h3> -->
+        <div class="icon-box">
+          <h5 class="h5h">Filtre 4</h5>
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="down-icon-2"
+          >
+          <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          ></path>
+        </svg>
+      </div>
+      <hr class="hr" />
+      <input type="checkbox" name="catégorie 1" />
+      <label>choix 1</label>
+      <br />
+      <input type="checkbox" name="catégorie 2" />
+      <label>choix 2</label>
+      <br />
+      <input type="checkbox" name="catégorie 3" />
+      <label>choix 3</label>
+      <br />
+      <input type="checkbox" name="catégorie 4" />
+      <label>choix 4</label>
+      <br />
+    </div>
+  </div>
+  <div class="right">
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+          <p class="text-2">MARQUE</p>
+          <hr class="hr-2" />
+          <p class="text-3">299,99 $</p>
+        </div>
+      </section>
+      <section class="marque">
+        <div class="promo-box promo-box-1">
+          <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+          <p class="text-2">MARQUE</p>
+          <hr class="hr-2" />
+          <p class="text-3">299,99 $</p>
+        </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+          <p class="text-2">MARQUE</p>
+          <hr class="hr-2" />
+          <p class="text-3">299,99 $</p>
+        </div>
+      </section>
+      <section class="marque">
+        <div class="promo-box promo-box-1">
+          <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+          <p class="text-2">MARQUE</p>
+          <hr class="hr-2" />
+          <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <section class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+        src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+        />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+        <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </section>
+    <div class="marque">
+      <div class="promo-box promo-box-1">
+        <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+      <div class="promo-box promo-box-1">
+        <img
+        class="barb-img"
+        alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+          <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+          <p class="text-2">MARQUE</p>
+          <hr class="hr-2" />
+          <p class="text-3">299,99 $</p>
+        </div>
+        <div class="promo-box promo-box-1">
+          <img
+          class="barb-img"
+          alt="barb-img"
+          src="JBQ1296221-0101-2250-p06-barbecue-gaz-class-acier-emaille-96kw-feux-class-1.jpg"
+          />
+          <hr class="hr-2" />
+        <p class="text-1-marque">Barbecue américain 3 bruleurs + side</p>
+        <p class="text-2">MARQUE</p>
+        <hr class="hr-2" />
+        <p class="text-3">299,99 $</p>
+      </div>
+    </div>
+  </section>
+</div>
+   <a href="#result-hr" class="up-icon" >
+
+     <svg
+     xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
+     stroke-width="1.5"
+     stroke="currentColor"
+     >
+     <path
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+     />
+    </svg>
+  </a> 
+<p class="least"> < 1...3 . 5...9> </p>
+<p class="least-4" >4</p>
+<footer class="footer">
+  <img src="LOGO SEVEA.svg " alt="logo" class="logo-sevea footer-logo" />
+  <div class="grid">
+    <a href="" class="p1">INFORMATIONS</a>
+    <a href="06-Mon-compte.html" class="p2" target="_blank"
+      >ESPACE PERSONNEL</a
+    >
+    <a href="07-fournisseurs.html" class="p3" target="_blank"
+      >ESPACE FOURNISSEUR</a
+    >
+    <a href="08-page-404.html" class="p4" target="_blank"
+      >Mentions Légales</a
+    >
+    <a href="06-Mon-compte.html" class="p5" target="_blank">Mon compte</a>
+    <a href="06-Mon-compte.html" class="p6" target="_blank">Mon compte</a>
+    <a href="#" class="p7">CGV</a>
+    <a href="#" class="p8">CGV</a>
+  </div>
+  <p class="last">&copy; 2017 SAS Sévéa, tous droits réservés</p>
+</footer>
+  </body>
+</html>
